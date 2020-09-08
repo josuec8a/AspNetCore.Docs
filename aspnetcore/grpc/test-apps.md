@@ -39,26 +39,7 @@ Discovering contracts makes gRPCurl much easier to use. gRPC ASP.NET Core has bu
     * `AddGrpcReflection()` to register services that enable reflection.
     * `MapGrpcReflectionService()` to add reflection service endpoint.
 
-```csharp
-public class Startup
-{
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.AddGrpc();
-        services.AddGrpcReflection();
-    }
-
-    public void Configure(IApplicationBuilder app)
-    {
-        app.UseRouting();
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapGrpcService<GreeterService>();
-            endpoints.MapGrpcReflectionService();
-        });
-    }
-}
-```
+[!code-csharp[](~/grpc/test-apps/Startup.cs?name=snippet_1&highlight=4,14)]
 
 ## Use `grpcurl`
 
