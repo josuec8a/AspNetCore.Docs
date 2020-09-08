@@ -14,7 +14,7 @@ By [James Newton-King](https://twitter.com/jamesnk)
 
 [grpcurl](https://github.com/fullstorydev/grpcurl) is a command-line tool that lets you interact with gRPC services. This article discusses how to test .NET gRPC services with `grpcurl`.
 
-## About `grpcurl`
+## About gRPCurl
 
 gRPCurl is a command-line tool created by the gRPC community. Its features include:
 
