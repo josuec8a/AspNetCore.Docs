@@ -36,7 +36,7 @@ For information about downloading and installing `grpcurl`, see the [gRPCurl Git
 * Use gRPC reflection to discover service contracts.
 * Specify *.proto* files in command-line arguments.
 
-Discovering contracts makes gRPCurl much easier to use. gRPC ASP.NET Core has built-in support for gRPC reflection with the [Grpc.AspNetCore.Server.Reflection](https://www.nuget.org/packages/Grpc.AspNetCore.Server.Reflection) package. To configure reflection in an app:
+It is much easier to use gRPCurl with gRPC reflection and service discovery. gRPC ASP.NET Core has built-in support for gRPC reflection with the [Grpc.AspNetCore.Server.Reflection](https://www.nuget.org/packages/Grpc.AspNetCore.Server.Reflection) package. To configure reflection in an app:
 
 * Add `Grpc.AspNetCore.Server.Reflection` package reference.
 * Register reflection in *Startup.cs*:
