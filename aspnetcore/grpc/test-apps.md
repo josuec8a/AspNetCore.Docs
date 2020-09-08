@@ -85,7 +85,7 @@ message HelloRequest {
 
 ### Call gRPC services
 
-Call a gRPC service by combining the service and method name, along with a JSON argument that represents the request message. The JSON is converted into protobuf.
+Call a gRPC service by combining the service and method name, along with a JSON argument that represents the request message. The JSON is converted into Protobuf and sent to the service.
 
 ```powershell
 > grpcurl.exe -d '{ \"name\": \"World\" }' localhost:5001 greet.Greeter/SayHello
@@ -96,7 +96,7 @@ Call a gRPC service by combining the service and method name, along with a JSON 
 
 The preceding example:
 
-* `-d` argument specifies a request message with JSON. A `name` value is sent to the server. `-d` argument must come before the server address and method name. Escaping the JSON string argument will vary depending on whether you're using powershell, cmd, bash, etc.
+* `-d` argument specifies a request message with JSON. This argument must come before the server address and method name.
 * Calls the `SayHello` method on the `greeter.Greeter` service.
 * Prints the response message as JSON.
 
