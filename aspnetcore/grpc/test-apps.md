@@ -12,7 +12,11 @@ uid: grpc/test-apps
 
 By [James Newton-King](https://twitter.com/jamesnk)
 
-[grpcurl](https://github.com/fullstorydev/grpcurl) is a command-line tool that lets you interact with gRPC services. This article discusses how to test .NET gRPC services with `grpcurl`.
+[grpcurl](https://github.com/fullstorydev/grpcurl) is a command-line tool that lets you interact with gRPC services. This article discusses how to:
+
+* Download and install gRPCurl.
+* Setup gRPC reflection with a gRPC ASP.NET Core app.
+* Discover and test gRPC services with `grpcurl`.
 
 ## About gRPCurl
 
@@ -43,7 +47,7 @@ Discovering contracts makes gRPCurl much easier to use. gRPC ASP.NET Core has bu
 
 ## Use `grpcurl`
 
-The `-help` argument explains gRPCurl's command-line options:
+The `-help` argument explains `grpcurl` command-line options:
 
 ```powershell
 > grpcurl.exe -help
@@ -73,7 +77,7 @@ The preceding example:
   * `Greeter` is a service implemented by the app.
   * `ServerReflection` is the service added by the `Grpc.AspNetCore.Server.Reflection` package.
 
-Combine `describe` with a name to view its detail:
+Combine `describe` with a service, method or message name to view its detail:
 
 ```powershell
 > grpcurl.exe localhost:5001 describe greet.HelloRequest
@@ -85,7 +89,7 @@ message HelloRequest {
 
 ### Call gRPC services
 
-Call a gRPC service by combining the service and method name, along with a JSON argument that represents the request message. The JSON is converted into Protobuf and sent to the service.
+Call a gRPC service by specifying a service and method name, along with a JSON argument that represents the request message. The JSON is converted into Protobuf and sent to the service.
 
 ```powershell
 > grpcurl.exe -d '{ \"name\": \"World\" }' localhost:5001 greet.Greeter/SayHello
