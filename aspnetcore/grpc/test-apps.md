@@ -38,10 +38,10 @@ For information about downloading and installing `grpcurl`, see the [gRPCurl Git
 
 Discovering contracts makes gRPCurl much easier to use. gRPC ASP.NET Core has built-in support for gRPC reflection with the [Grpc.AspNetCore.Server.Reflection](https://www.nuget.org/packages/Grpc.AspNetCore.Server.Reflection) package. To configure reflection in an app:
 
-1. Add `Grpc.AspNetCore.Server.Reflection` package reference.
-2. Register reflection in *Startup.cs*:
-    * `AddGrpcReflection()` to register services that enable reflection.
-    * `MapGrpcReflectionService()` to add reflection service endpoint.
+* Add `Grpc.AspNetCore.Server.Reflection` package reference.
+* Register reflection in *Startup.cs*:
+  * `AddGrpcReflection()` to register services that enable reflection.
+  * `MapGrpcReflectionService()` to add reflection service endpoint.
 
 [!code-csharp[](~/grpc/test-apps/Startup.cs?name=snippet_1&highlight=4,14)]
 
